@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Coffee Enyong Palette (Warm Espresso & Caramel Theme) -->
+    <color name="coffee_bg_dark">#281A14</color>
+    <color name="coffee_card_dark">#38251D</color>
+    <color name="coffee_card_border">#4D3328</color>
+    <color name="coffee_input_bg">#241712</color>
+    <color name="coffee_input_stroke">#4D3328</color>
+    <color name="coffee_text_primary">#F5EBE0</color>
+    <color name="coffee_text_secondary">#D4C3B3</color>
+    <color name="coffee_text_hint">#A69282</color>
+    <color name="coffee_accent">#C67C4E</color>
+    <color name="coffee_accent_pressed">#A05822</color>
+    <color name="coffee_accent_light">#D4A373</color>
+
+    <!-- Rekap Pesanan Palette -->
+    <color name="coffee_rekap_bg">#FDF8F2</color>
+    <color name="coffee_rekap_stroke">#EAE0D5</color>
+    <color name="coffee_rekap_text_dark">#2C1E18</color>
+    <color name="coffee_rekap_text_muted">#6F4E37</color>
+    <color name="coffee_rekap_badge_bg">#EFE3D3</color>
+    <color name="coffee_rekap_icon_bg">#E8D8C8</color>
+</resources>

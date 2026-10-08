@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pertemuan 5</string>
+    <string name="btn_1">Button 1</string>
+    <string name="btn_2">Button 2</string>
+    <string-array name="kota_tujuan">
+        <item>Jakarta</item>
+        <item>Bandung</item>
+        <item>Surabaya</item>
+        <item>Yogyakarta</item>
+        <item>Semarang</item>
+        <item>Medan</item>
+    </string-array>
+</resources>

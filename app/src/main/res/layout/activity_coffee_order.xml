@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainCoffeeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_coffee_pattern"
+    android:fillViewport="true"
+    tools:context=".CoffeeOrderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu"
+                android:contentDescription="Menu Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Coffee Hana"
+                android:textColor="@color/coffee_text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_profile"
+                android:contentDescription="Profile Icon" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:text="Coffee\nHana"
+                    android:textColor="@color/coffee_accent_light"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivHeroCoffee"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_coffee_hero"
+                    android:contentDescription="Hero Coffee" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="end"
+                    android:text="It's Coffee\nTime"
+                    android:textColor="@color/coffee_accent_light"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvHeroTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pick Your Coffe"
+                android:fontFamily="@font/astoria"
+                android:textColor="@color/coffee_text_primary"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Isi formulir di bawah ini dengan pilihan varian, ukuran, dan topping favorit Anda."
+                android:textColor="@color/coffee_text_hint"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_dark_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 1. EditText: Nama Pemesan -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAMA PEMESAN"
+                android:textColor="@color/coffee_accent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNamaPemesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp"
+                android:autofillHints="name"
+                android:background="@drawable/bg_dark_input"
+                android:hint="Masukkan nama Anda"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textColor="@color/coffee_text_primary"
+                android:textColorHint="@color/coffee_text_hint"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PILIH VARIAN MINUMAN"
+                android:textColor="@color/coffee_accent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_dark_input">
+
+                <Spinner
+                    android:id="@+id/spVarianMinuman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PILIH UKURAN (SIZE)"
+                android:textColor="@color/coffee_accent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/rgUkuran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/containerSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_dark_input"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rbSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:buttonTint="@color/coffee_accent"
+                        android:text="Small (S)"
+                        android:textColor="@color/coffee_text_primary"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/containerMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_dark_input"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rbMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:buttonTint="@color/coffee_accent"
+                        android:checked="true"
+                        android:text="Medium (M)"
+                        android:textColor="@color/coffee_text_primary"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/containerLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dark_input"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rbLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:buttonTint="@color/coffee_accent"
+                        android:text="Large (L)"
+                        android:textColor="@color/coffee_text_primary"
+                        android:textSize="14sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUHU (TEMPERATURE)"
+                android:textColor="@color/coffee_accent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/rgSuhu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/containerHot"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_dark_input"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rbHot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:buttonTint="@color/coffee_accent"
+                        android:checked="true"
+                        android:text="Hot (Panas)"
+                        android:textColor="@color/coffee_text_primary"
+                        android:textSize="13sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/containerIce"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_dark_input"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rbIce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:buttonTint="@color/coffee_accent"
+                        android:text="Ice (Dingin)"
+                        android:textColor="@color/coffee_text_primary"
+                        android:textSize="13sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOPPING / TAMBAHAN"
+                android:textColor="@color/coffee_accent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/bg_dark_input"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cbExtraShot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:buttonTint="@color/coffee_accent"
+                        android:text="Extra Shot Espresso (+Rp 5.000)"
+                        android:textColor="@color/coffee_text_primary"
+                        android:textSize="13sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/bg_dark_input"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cbBoba"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:buttonTint="@color/coffee_accent"
+                        android:text="Boba (+Rp 4.000)"
+                        android:textColor="@color/coffee_text_primary"
+                        android:textSize="13sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/bg_dark_input"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cbWhippedCream"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:buttonTint="@color/coffee_accent"
+                        android:text="Whipped Cream (+Rp 3.000)"
+                        android:textColor="@color/coffee_text_primary"
+                        android:textSize="13sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dark_input"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cbOatMilk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:buttonTint="@color/coffee_accent"
+                        android:text="Oat Milk (+Rp 5.000)"
+                        android:textColor="@color/coffee_text_primary"
+                        android:textSize="13sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CATATAN KHUSUS"
+                android:textColor="@color/coffee_accent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCatatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:autofillHints="none"
+                android:background="@drawable/bg_dark_input"
+                android:hint="Contoh: Less sugar, extra ice"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/coffee_text_primary"
+                android:textColorHint="@color/coffee_text_hint"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_price_box"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <TextView
+                    android:id="@+id/tvTotalCalculated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 26.000"
+                    android:textColor="@color/coffee_text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnProsesPesanan"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_buy_button"
+                android:text="Proses Pesanan"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Rekap Pesanan"
+                android:textColor="@color/coffee_text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/lvRekapPesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:nestedScrollingEnabled="true"
+                tools:listitem="@layout/item_rekap_pesanan" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
